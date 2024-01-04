@@ -9,9 +9,14 @@ public class CustomLinkedList {
     * Nodes ideally refers to a data structure that contains data and reference to another node.
     *
     * Below is an implementation of a single linkedlist:
-    *
-    *
-    *
+    * linkFirst()
+    * linkLast()
+    * get(index) -> node
+    * insert(data, index)
+    * removeFirst()
+    * removeLast()
+    * remove(index)
+    * display()
     */
 
     private class Node {
@@ -106,6 +111,17 @@ public class CustomLinkedList {
 
     // Insert through LinkedList
     public void insert(int value, int index) {
+        /*
+        * Algorithm -
+        * Create temporary node to point to head
+        * Traverse to index before the intended index
+        * Update node to point to the next node. In this case, it points to the node address where you want to update its reference
+        * Create new node.
+        * Set the data you are trying to insert.
+        * Set the next node parameter to the current temporary node's next address. That is the node after the index you're trying to update
+        * Set the node before the index (temporary node) to point to the new node.
+        */
+
         if (index == 0) {
             linkFirst(value);
             return;
