@@ -1,6 +1,6 @@
-package com.project300.CustomLinkedList;
+package com.project300.DataStructures.CustomLinkedList;
 
-public class CustomLinkedList {
+public class SinglyLinkedList {
     /*  LINKEDLIST IMPLEMENTATION
     *-----------------------------
     *-----------------------------
@@ -40,7 +40,7 @@ public class CustomLinkedList {
     private Node tail;     // Points to the last node of the linkedlist
     private int size;       // Allows tracking of the size of the linkedlist to ensure controlled traversal
 
-    public CustomLinkedList() {
+    public SinglyLinkedList() {
         this.size = 0;
     }
 
@@ -209,7 +209,7 @@ public class CustomLinkedList {
 
 
     public static void main(String[] args) {
-        CustomLinkedList list = new CustomLinkedList();
+        SinglyLinkedList list = new SinglyLinkedList();
 
         list.add(3);
         list.add(5);
