@@ -31,6 +31,7 @@ public class SinglyLinkedList {
             this.data = data;
             this.next = next;
         }
+
     }
 
     // Main components of a LinkedList
@@ -106,6 +107,23 @@ public class SinglyLinkedList {
 
         // Returns null to indicate node doesn't exist at that index
         return node;
+    }
+
+    public int getFirst() {
+        Node node = head;
+        return (node != null) ? node.data : null;
+    }
+
+    public int getLast() {
+        Node node = head;
+        while(node != null) {
+            node = node.next;
+
+            if(node.next == null) {
+                break;
+            }
+        }
+        return (node)
     }
 
 
@@ -231,6 +249,7 @@ public class SinglyLinkedList {
 
 //        list.remove(3);
         list.display();
+        list.viewPreviousNode();
 //
 //
 //    }
