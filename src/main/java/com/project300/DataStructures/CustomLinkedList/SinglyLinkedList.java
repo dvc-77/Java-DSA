@@ -123,7 +123,7 @@ public class SinglyLinkedList {
                 break;
             }
         }
-        return (node)
+        return node.data;
     }
 
 
@@ -191,6 +191,7 @@ public class SinglyLinkedList {
     }
 
     // Remove from linkedList
+    // Need to implement this better
     public void remove(int index) {
         if(index == 0) {
             removeFirst();
@@ -249,7 +250,6 @@ public class SinglyLinkedList {
 
 //        list.remove(3);
         list.display();
-        list.viewPreviousNode();
 //
 //
 //    }
