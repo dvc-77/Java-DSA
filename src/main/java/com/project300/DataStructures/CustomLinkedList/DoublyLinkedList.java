@@ -81,7 +81,7 @@ public class DoublyLinkedList {
         System.out.println();
     }
 
-    public boolean removeFirst() {  // Remove from first index
+    public boolean removeFirst() {
         if(head != null) {
             head = head.next;
             head.prev = null;
