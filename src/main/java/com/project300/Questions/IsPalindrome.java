@@ -1,5 +1,7 @@
 package com.project300.Questions;
 
+import java.util.HashSet;
+
 public class IsPalindrome {
     class Solution {
         // Time complexity: O(N)
@@ -16,7 +18,6 @@ public class IsPalindrome {
 //            return true;
 //        }
         public boolean isPalindrome(String s){
-            s = s.toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
             int start = 0;
             int end  = s.length() - 1;
             while(start <= end) {
