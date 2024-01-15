@@ -16,11 +16,6 @@ public class ArrayLists {
 
         for(int index = 0; index < length; index++) {
             if(arr.get(index) > value) {
-
-                for(int shiftIndex = length - 1; shiftIndex >= arr.get(index); shiftIndex--) {
-                    int temp = arr.get(shiftIndex);
-                    arr.add(shiftIndex + 1, temp);
-                }
                 arr.add(index, value);
                 break;
             }
@@ -31,7 +26,38 @@ public class ArrayLists {
 
     // Insertion via binary search
 
-//    public static ArrayList<In>
+    public static ArrayList<Integer> insert1(ArrayList<Integer> arr, int value) {
+        int length = arr.size();
+
+        if(value > arr.getLast()) {
+            arr.add(value);
+            return arr;
+        }
+
+        int left = 0;
+        int right = length - 1;
+        int index = 0;
+
+        while(left <= right) {
+            int midpoint = (left + right) / 2;
+            index = midpoint;
+
+            if(arr.get(midpoint) > value) {
+               right = midpoint - 1;
+            }else if(arr.get(midpoint) < value) {
+                left = midpoint + 1;
+            }
+        }
+//        for(int shiftIndex = length - 1; shiftIndex >= index; shiftIndex--) {
+//            int temp = arr.get(shiftIndex);
+//            arr.add(shiftIndex, temp);
+//        }
+
+        arr.add(index, value);
+
+
+        return arr;
+    }
 
 
     public static void main(String[] args) {
@@ -43,7 +69,7 @@ public class ArrayLists {
         arr.add(202);
 
         System.out.println(insert(arr, 75));
-        System.out.println(insert(arr, 90));
+        System.out.println(insert1(arr, 90));
 
 //        // Convert int[] to Integer[] using Java 8 Streams
 //        Integer[] integerArray = Arrays.stream(intArray).boxed().toArray(Integer[]::new);
