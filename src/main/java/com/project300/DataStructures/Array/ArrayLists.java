@@ -69,7 +69,7 @@ public class ArrayLists {
         arr.add(202);
 
         System.out.println(insert(arr, 75));
-        System.out.println(insert1(arr, 90));
+        System.out.println(insert1(arr, 5));
 
 //        // Convert int[] to Integer[] using Java 8 Streams
 //        Integer[] integerArray = Arrays.stream(intArray).boxed().toArray(Integer[]::new);
