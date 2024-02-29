@@ -1,4 +1,4 @@
-package com.project300.DataStructures.CustomLinkedList;
+package com.project300.data_structures.custom_linkedList;
 
 public class DoublyLinkedList {
 

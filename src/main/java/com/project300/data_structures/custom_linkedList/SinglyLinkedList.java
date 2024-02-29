@@ -1,4 +1,4 @@
-package com.project300.DataStructures.CustomLinkedList;
+package com.project300.data_structures.custom_linkedList;
 
 public class SinglyLinkedList {
     /*  LINKEDLIST IMPLEMENTATION
@@ -26,7 +26,6 @@ public class SinglyLinkedList {
         private Node(int data) {
             this.data = data;
         }
-
         private Node(int data, Node next) {
             this.data = data;
             this.next = next;
@@ -35,8 +34,6 @@ public class SinglyLinkedList {
     }
 
     // Main components of a LinkedList
-
-
     private Node head;     // Points to the first node of the linkedlist
     private Node tail;     // Points to the last node of the linkedlist
     private int size;       // Allows tracking of the size of the linkedlist to ensure controlled traversal

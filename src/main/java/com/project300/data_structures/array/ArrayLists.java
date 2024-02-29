@@ -1,4 +1,4 @@
-package com.project300.DataStructures.Array;
+package com.project300.data_structures.array;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package com.project300.DataStructures.HashTables;
+package com.project300.data_structures.hash_tables;
 
 public class HashMaps {
     public static void main(String[] args) {
