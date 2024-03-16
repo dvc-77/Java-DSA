@@ -2,7 +2,7 @@ package com.project300.data_structures.array;
 
 import java.util.Arrays;
 
-public class DynamicList<T> {
+public class DynamicList<E> {
     private static final int DEFAULT_CAPACITY = 10;
     private Object[] elements;
     private int size;
@@ -11,12 +11,12 @@ public class DynamicList<T> {
         this.size = 0;
     }
 
-    public void add(T element) {
+    public void add(E element) {
         ensureCapacity();
         elements[size++] = element;
     }
 
-    public void add(int index, T element) {
+    public void add(int index, E element) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }
@@ -34,11 +34,11 @@ public class DynamicList<T> {
         size++;
     }
 
-    public T get(int index) {
+    public E get(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }
-        return (T) elements[index];
+        return (E) elements[index];
     }
 
     private void ensureCapacity() {
