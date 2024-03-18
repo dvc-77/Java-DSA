@@ -1,20 +1,23 @@
 package com.project300.data_structures.array;
 
 import java.util.Arrays;
-
-public class FixedList <T> {
-    private T[] data;
+public class FixedList <E extends Comparable>{
+    private E[] data;
     private static final int DEFAULT_CAPACITY = 10;
     private int index;
     private int size;
 
     public FixedList() {
-        this.data = (T[]) new Object[DEFAULT_CAPACITY];
+        this.data = (E[]) new Object[DEFAULT_CAPACITY];
         this.index = 0;
     }
 
     public FixedList(int capacity) {
-        this.data = (T[]) new Object[capacity];
+        if (capacity > 0) {
+            this.data = (E[]) new Object[capacity];
+        } else {
+            throw new IllegalArgumentException("Illegal Capacity: "+ capacity);
+        }
         this.index = 0;
     }
 
@@ -27,13 +30,13 @@ public class FixedList <T> {
 
     }
 
-    public void add(T element) {
+    public void add(E element) {
         checkIndexOutOfBound(index);
         data[index++] = element;
         size++;
     }
 
-    public void add(T element, int index) {
+    public void add(E element, int index) {
         checkIndexOutOfBound(index);
         int lastIndex = data.length - 1;
 
@@ -55,6 +58,7 @@ public class FixedList <T> {
         }
 
         data[index] = element;
+        this.index++;
         size++;
     }
 
@@ -62,14 +66,14 @@ public class FixedList <T> {
         return data.length;
     }
 
-    public T get(int index) {
+    public E get(int index) {
         if (index < 0 || index >= data.length) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + data.length);
         }
         if(data[index] == null) {
             throw new NullPointerException("No value at Index");
         }
-        return (T) data[index];
+        return data[index];
     }
 
     public String toString() {
@@ -81,10 +85,10 @@ public class FixedList <T> {
         return (data[0] == null);
     }
 
-    public T remove(int index) {
+    public E remove(int index) {
         get(index);
 
-        T value = data[index];
+        E value = data[index];
 
         if (!isEmpty()) {
             int lastIndex = data.length - 1;
@@ -96,27 +100,49 @@ public class FixedList <T> {
         return value;
     }
 
+    public E set(int index, E element) {
+        checkIndexOutOfBound(index);
+        E oldValue = get(index);
+        data[index] = element;
+        return oldValue;
+    }
+
+
+    // sorted the list using the arrays sorting (quicksort)
+    public void sort() {
+        if (isEmpty()) {
+            return;
+        }
+        Arrays.sort(data, Comparable::compareTo);
+    }
+
+
+
+
     public static void main(String[] args) {
-        FixedList<Integer> list = new FixedList<>();
+        FixedList<Integer> list = new FixedList<>(0);
 
-//        list.add(1, 5);
-//        list.add(1);
-//        list.add(2);
-//        list.add(3);
-//        list.add(4);
-//        list.add(5);
-//        list.add(6);
-//        list.add(7);
-//        list.add(8);
-//        list.add(9);
-//        list.add(10);
+        list.add(10, 5);
+        list.add(1);
+        list.add(2);
+        list.add(5);
+        list.add(9);
+        list.add(3);
+        list.add(8);
+        list.add(6);
+        list.add(4);
+        list.add(7);
 
-        System.out.println(list.remove(2));
+
+        System.out.println(list.remove(1));
+
+        list.sort();
+        System.out.println(list);
 
 //        list.add(11, 2);
 
-        System.out.println(list);
 
     }
+
 
 }

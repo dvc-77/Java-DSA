@@ -1,6 +1,7 @@
 package com.project300.data_structures.array;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class DynamicList<E> {
     private static final int DEFAULT_CAPACITY = 10;
@@ -51,6 +52,8 @@ public class DynamicList<E> {
     public int size() {
         return size;
     }
+
+
 
     public static void main(String[] args) {
         DynamicList<String> myList = new DynamicList<>();
