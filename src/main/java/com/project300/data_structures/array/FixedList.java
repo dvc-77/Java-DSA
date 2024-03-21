@@ -152,8 +152,7 @@ public class FixedList <E extends Comparable>{
 
 //        list.add(11, 2);
 
-
-
+        int[] num = {8,9,9,9};
 
 
     }

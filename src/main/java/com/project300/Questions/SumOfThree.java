@@ -8,7 +8,6 @@ public class SumOfThree {
                 return new long[] {x - 1, x, x + 1};
             }
             return new long[] {};
-
         }
     }
 }
