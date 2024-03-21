@@ -154,7 +154,8 @@ public class FixedList <E extends Comparable>{
 
         int[] num = {8,9,9,9};
 
-
+        int[][] val = new int[3][4];
+        System.out.println(val.length);
     }
 
 
