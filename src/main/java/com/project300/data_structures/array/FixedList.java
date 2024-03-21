@@ -1,6 +1,7 @@
 package com.project300.data_structures.array;
 
-import java.util.Arrays;
+import java.util.*;
+
 public class FixedList <E extends Comparable>{
     private E[] data;
     private static final int DEFAULT_CAPACITY = 10;
@@ -120,24 +121,34 @@ public class FixedList <E extends Comparable>{
 
 
     public static void main(String[] args) {
-        FixedList<Integer> list = new FixedList<>(0);
+//        FixedList<Integer> list = new FixedList<>(0);
+//
+//        list.add(10, 5);
+//        list.add(1);
+//        list.add(2);
+//        list.add(5);
+//        list.add(9);
+//        list.add(3);
+//        list.add(8);
+//        list.add(6);
+//        list.add(4);
+//        list.add(7);
+//
+//
+//        System.out.println(list.remove(1));
+//
+//        list.sort();
+//        System.out.println(list);
 
-        list.add(10, 5);
-        list.add(1);
-        list.add(2);
-        list.add(5);
-        list.add(9);
-        list.add(3);
-        list.add(8);
-        list.add(6);
-        list.add(4);
-        list.add(7);
 
 
-        System.out.println(list.remove(1));
 
-        list.sort();
-        System.out.println(list);
+
+//        Arrays.sort(strs);
+//
+//        System.out.println(Arrays.toString(strs));
+//
+
 
 //        list.add(11, 2);
 
