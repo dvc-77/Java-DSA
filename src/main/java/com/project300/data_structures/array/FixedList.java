@@ -153,7 +153,11 @@ public class FixedList <E extends Comparable>{
 //        list.add(11, 2);
 
 
+
+
+
     }
+
 
 
 }
