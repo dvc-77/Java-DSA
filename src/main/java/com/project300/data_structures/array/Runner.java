@@ -1,35 +1,23 @@
 package com.project300.data_structures.array;
 
-import java.util.Arrays;
+import java.util.Random;
 
 public class Runner {
     public static void main(String[] args) {
-        DynamicList<String> myList = new DynamicList<>();
+        DynamicList<Integer> myList = new DynamicList<>();
 
-        myList.add("Item 1");
-        myList.add("Item 2");
-        myList.add("Item 2");
-        myList.add("Item 2");
-        myList.add("Item 2");
-        myList.add("Item 2");
-        myList.add("Item 2");
-        myList.add("Item 2");
-        myList.add("Item 2");
-        myList.add("Item 2");
-        myList.add("Item 2");
-        myList.add("Item 2");
-        myList.add("Item 2");
-        myList.add("Item 2");
-        myList.add("Item 2");
-        myList.add("Item 3");
+        Random random = new Random();
+        random.setSeed(13);
+        int numElements = 23;
 
+        for (int i = 0; i < numElements; i++) {
+            int randomInt = random.nextInt(100);
+            myList.add(randomInt);
+        }
 
-        myList.add(1, "Inserted Item");
         myList.remove(1);
-        myList.trimToSize();
 
-        System.out.println("List size: " + myList.size());
-
+//        myList.trimToSize();
 
         System.out.println("List after inserting at index 1: " + myList);
 

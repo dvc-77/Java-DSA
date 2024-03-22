@@ -5,11 +5,11 @@ import java.util.Objects;
 
 public class DynamicList<E> {
     private static final int DEFAULT_CAPACITY = 10;
-    private Object[] elements;
+    private E[] elements;
     private int size;
 
     public DynamicList() {
-        this.elements = new Object[DEFAULT_CAPACITY];
+        this.elements = (E[]) new Object[DEFAULT_CAPACITY];
         this.size = 0;
     }
 
@@ -78,6 +78,8 @@ public class DynamicList<E> {
     }
     @Override
     public String toString() {
+        System.out.println("Length of list: "+ elements.length);
+        System.out.println("Current size of list: "+ size());
         return Arrays.toString(Arrays.copyOf(elements, size));
     }
 

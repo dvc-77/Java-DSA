@@ -2,7 +2,7 @@ package com.project300.data_structures.array;
 
 import java.util.*;
 
-public class FixedList <E extends Comparable>{
+public class FixedList <E>{
     private E[] data;
     private static final int DEFAULT_CAPACITY = 10;
     private int index;
@@ -110,12 +110,12 @@ public class FixedList <E extends Comparable>{
 
 
     // sorted the list using the arrays sorting (quicksort)
-    public void sort() {
-        if (isEmpty()) {
-            return;
-        }
-        Arrays.sort(data, Comparable::compareTo);
-    }
+//    public void sort() {
+//        if (isEmpty()) {
+//            return;
+//        }
+//        Arrays.sort(data, Comparable::compareTo);
+//    }
 
 
 
